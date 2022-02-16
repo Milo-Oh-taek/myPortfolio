@@ -1,7 +1,7 @@
 import React from "react";
 import useScroll from "../hooks/useScroll";
 
-const Projects = () => {
+const ProjectsKor = () => {
   const projectHeader = useScroll();
   const project1 = useScroll();
   const project2 = useScroll();
@@ -10,7 +10,7 @@ const Projects = () => {
       <div className="section_content_wrapper">
         <div className="projects_content_area">
           <div {...projectHeader}>
-            <h1>Projects</h1>
+            <h1>프로젝트</h1>
           </div>
           <div className="project_box_div" {...project1}>
             <div className="project_half_left">
@@ -19,22 +19,23 @@ const Projects = () => {
             <div className="project_half_right">
               <div>
                 <h2>My Shopping list</h2>
-                (1person toy project)
+                (1인 개발 프로젝트)
                 <br />
                 <br />
                 <ul>
                   <li>
-                    I built this standard type of CRUD website by using{" "}
-                    <b>MERN + Typescript</b>.
+                    기본적인 게시판 형태의 CRUD 기능을 <b>MERN + Typescript</b>{" "}
+                    를 적용하여 만들었습니다.
                   </li>
                   <li>
-                    Login function through <b>JWT saved in Cookie</b>,
+                    <b>JWT 토큰</b>을 cookie에 저장하여 <b>로그인</b>을
+                    구현하였으며
                   </li>
                   <li>
-                    <b>Uploaded Images</b> are saved in <b>AWS S3 Bucket</b>.
+                    <b>이미지 업로드는 AWS S3</b>에 저장하도록 했습니다.
                   </li>
                   <li>
-                    Also I can experience basic function of <b>NOSQL</b>.
+                    <b>NOSQL</b>의 기초적인 기능들을 다뤄볼 수 있었습니다.
                   </li>
                 </ul>
               </div>
@@ -86,29 +87,32 @@ const Projects = () => {
             <div className="project_half_right">
               <div>
                 <h2>Sniffer dog</h2>
-                (1person toy project)
+                (1인 개발 프로젝트)
                 <br />
                 <br />
                 <ul>
                   <li>
-                    It's kind of typical shopping mall type using <b>Next</b>{" "}
-                    which enables
-                    <b>server-side-rendering without flickering</b>.
+                    쇼핑몰 형태의 향수 커뮤니티 사이트를 <b>Next</b>를 이용하여
+                    <b> 깜빡임없이 서버사이드 렌더링</b>이 되도록
+                    제작하였습니다.{" "}
                   </li>
                   <li>
-                    <b>Multiple filters</b> through <b>query string</b>,
+                    <b>쿼리스트링</b>으로 중복&복수 <b>필터링</b>을 구현하였고,
+                  </li>{" "}
+                  <li>
+                    <b>Redux Toolkit</b>을 사용하여 <b>상태관리</b>를 했는데
+                    개인적으로 Redux saga보다 간결하며 사용하기 편하다고
+                    느꼈습니다.
                   </li>
                   <li>
-                    <b>Redux Toolkit for states management</b> I personally
-                    think it's more transparent than Redux-saga.
+                    <b>Sequelize</b>를 처음 사용해 보았는데 많은 테이블 간의
+                    조인을 하면서 어려움을 겪었습니다.
                   </li>
                   <li>
-                    Had struggles with figuring out how to Join several tables
-                    in <b>Sequelize</b>.
-                  </li>
-                  <li>
-                    Built{" "}
-                    <b>Reverse Proxy server through Nginx + Let's Encrypt</b>.
+                    <b>
+                      Nginx + Let's Encrypt로 SSL을 설정한 리버스 프록시 서버
+                    </b>
+                    를 구축하였습니다.
                   </li>
                 </ul>
               </div>
@@ -157,4 +161,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsKor;

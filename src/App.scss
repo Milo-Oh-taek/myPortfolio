@@ -16,6 +16,20 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.lang_area {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  color: white;
+}
+.lang_toggle_area {
+  display: flex;
+  align-items: center;
+  .lang_icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
 
 .nav_wrapper {
   padding: 1.5rem 0;

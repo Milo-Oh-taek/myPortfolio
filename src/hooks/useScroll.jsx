@@ -10,8 +10,8 @@ const useScroll = () => {
             current.classList.add('inside_of_viewport');
             current.classList.remove('out_of_viewport');
         } else {
-            current.classList.add('out_of_viewport');
-            current.classList.remove('inside_of_viewport');
+            current?.classList.add('out_of_viewport');
+            current?.classList.remove('inside_of_viewport');
         }
         
     },[]);
