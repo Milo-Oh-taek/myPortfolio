@@ -10,19 +10,19 @@ const Aboutme = () => {
           <h1>Nice to meet you.</h1>
           <div>
             <p>
-              I'm a Front End Developer from South Korea who is interested in
-              learning new skills
+              I am a South Korean Front End Developer who is passionate about
+              learning new skills.
               <br />
-              which are not only Front End but Back End.
+              My interests lie in a Front End Development, as well as in a Back
+              End Development.
             </p>
             <p>
-              I'm looking for a team that I can learn from a lot
-              <br /> and also I can contribute to
+              I am looking to be a part of a team to which I can contribute and
+              learn from.
             </p>
             <p>
-              My goal is I could do coding for a long time as a web developer
-              <br />
-              who keep learning new things, sharing knowledge
+              My ultimate goal is to built a successful career as a web
+              developer, to acquire new skills and share my knowledge.
             </p>
           </div>
         </div>

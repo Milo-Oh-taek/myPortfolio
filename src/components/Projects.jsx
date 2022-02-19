@@ -34,7 +34,7 @@ const Projects = () => {
                     <b>Uploaded Images</b> are saved in <b>AWS S3 Bucket</b>.
                   </li>
                   <li>
-                    Also I can experience basic function of <b>NOSQL</b>.
+                    I'm familiar with basic <b>NOSQL</b> functions.
                   </li>
                 </ul>
               </div>
@@ -91,20 +91,15 @@ const Projects = () => {
                 <br />
                 <ul>
                   <li>
-                    It's kind of typical shopping mall type using <b>Next</b>{" "}
-                    which enables
-                    <b>server-side-rendering without flickering</b>.
+                    It is a standard online-shop website, <b>built with Next</b> which
+                    enables <b>server-side-rendering without flickering.</b>
                   </li>
                   <li>
                     <b>Multiple filters</b> through <b>query string</b>,
                   </li>
                   <li>
-                    <b>Redux Toolkit for states management</b> I personally
-                    think it's more transparent than Redux-saga.
-                  </li>
-                  <li>
-                    Had struggles with figuring out how to Join several tables
-                    in <b>Sequelize</b>.
+                    I used <b>Redux Toolkit</b> for states management, as I find it
+                    more transparant than Redux-saga.
                   </li>
                   <li>
                     Built{" "}
