@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCommentDots } from "@fortawesome/free-solid-svg-icons";
 import ChatArea from "./ChatArea";
+import io from "socket.io-client";
 
 const Chat = () => {
   const [chatVisible, setChatVisible] = useState(false);
@@ -28,6 +29,13 @@ const Chat = () => {
   const closeHandler = () => {
     setOpenChat(false);
   };
+
+  useEffect(() => {
+    if (!openChat) return;
+    setTimeout(() => {
+      io.connect("http://localhost:3001");
+    }, 1000);
+  }, [openChat]);
 
   return (
     <div className={chatVisible ? "chatWrapper" : "chatWrapper hide"}>
