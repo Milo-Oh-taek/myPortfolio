@@ -34,7 +34,7 @@ const Chat = () => {
     if (!openChat) return;
     setTimeout(() => {
       io.connect("http://localhost:3001");
-    }, 1000);
+    }, 500);
   }, [openChat]);
 
   return (

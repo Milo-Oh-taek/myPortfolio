@@ -12,14 +12,9 @@ const ChatArea = ({ onClose }) => {
   const sendMsg = (e) => {
     e.preventDefault();
     let msg = e.target.msg.value;
-    let array = new Uint32Array(1);
 
-    socket.emit(
-      "send message",
-      { id: window.crypto.getRandomValues(array)[0], message: msg },
-      (e.target.msg.value = "")
-    );
-    setMsgArr((msgArr) => msgArr.concat(msg));
+    socket.emit("send message", { message: msg }, (e.target.msg.value = ""));
+    // setMsgArr((msgArr) => msgArr.concat(msg));
   };
 
   const scrollToBottom = () => {
@@ -28,8 +23,14 @@ const ChatArea = ({ onClose }) => {
 
   useEffect(() => {
     scrollToBottom();
-    console.log("scroll");
   }, [msgArr]);
+
+  useEffect(() => {
+    socket.on("receive message", (message) => {
+      console.log(msgArr);
+      setMsgArr((msgArr) => msgArr.concat(message));
+    });
+  }, []);
 
   return (
     <div className="chatArea">
