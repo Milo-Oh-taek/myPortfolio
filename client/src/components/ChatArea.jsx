@@ -1,7 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faXmark,
+  faCheckDouble,
+  faExclamation,
+} from "@fortawesome/free-solid-svg-icons";
 import io from "socket.io-client";
 const socket = io.connect("http://localhost:3001");
 
@@ -14,7 +18,6 @@ const ChatArea = ({ onClose }) => {
     let msg = e.target.msg.value;
 
     socket.emit("send message", { message: msg }, (e.target.msg.value = ""));
-    // setMsgArr((msgArr) => msgArr.concat(msg));
   };
 
   const scrollToBottom = () => {
@@ -27,7 +30,7 @@ const ChatArea = ({ onClose }) => {
 
   useEffect(() => {
     socket.on("receive message", (message) => {
-      console.log(msgArr);
+      console.log(message);
       setMsgArr((msgArr) => msgArr.concat(message));
     });
   }, []);
@@ -43,7 +46,8 @@ const ChatArea = ({ onClose }) => {
           fontSize: "18px",
         }}
       >
-        Live chat with Milo
+        Want to know more? <br />
+        Message me!
         <FontAwesomeIcon
           icon={faXmark}
           onClick={() => onClose()}
@@ -62,23 +66,63 @@ const ChatArea = ({ onClose }) => {
         ref={scrollRef}
       >
         {msgArr.map((elem) => (
-          <div
-            style={{
-              display: "flex",
-              textAlign: "center",
-              height: "auto",
-              margin: "1rem",
-            }}
-          >
-            <div
-              style={{ fontWeight: "bold", width: "50px", fontSize: "12px" }}
-            >
-              you{" "}
-            </div>
-            <div style={{ textAlign: "left", width: "85%", fontSize: "12px" }}>
-              {elem}
-            </div>
-          </div>
+          <>
+            {(elem.server === "succeed" || elem.server === "failed") && (
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  marginTop: "-29px",
+                  marginRight: "26px",
+                }}
+              >
+                {elem.server === "succeed" ? (
+                  <FontAwesomeIcon
+                    icon={faCheckDouble}
+                    style={{ height: "10px" }}
+                  />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={faExclamation}
+                    style={{ height: "10px" }}
+                  />
+                )}
+              </div>
+            )}
+
+            {(elem.server === "Y" || elem.server === "N") && (
+              <div
+                style={{
+                  display: "flex",
+                  textAlign: "center",
+                  height: "auto",
+                  margin: "1rem",
+                }}
+              >
+                {elem.server === "N" && (
+                  <div
+                    style={{
+                      fontWeight: "bold",
+                      width: "50px",
+                      fontSize: "12px",
+                    }}
+                  >
+                    you{" "}
+                  </div>
+                )}
+
+                <div
+                  style={{
+                    textAlign: "left",
+                    width: "85%",
+                    fontSize: "12px",
+                  }}
+                >
+                  {elem.msg}
+                </div>
+              </div>
+            )}
+          </>
         ))}
       </div>
 
