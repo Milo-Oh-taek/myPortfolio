@@ -185,7 +185,7 @@ section {
   z-index: 9999;
   bottom: 40px;
   right: 5%;
-  transition: 0.8s;
+  transition: 0.5s;
   cursor: pointer;
   svg {
     height: 40px;
@@ -197,16 +197,79 @@ section {
 
 .chatWrapper.hide {
   bottom: -500px;
-  transition: 0.8s;
+  transition: 0.5s;
 }
 
 .chatArea {
-  width: 300px;
+  width: 308px;
   height: 500px;
   border: solid 1px;
   border-radius: 1rem;
   background-color: white;
   padding: 10px;
+  .chat_Title {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 10px;
+    font-size: 18px;
+  }
+  .chat_dialogue {
+    width: 100%;
+    height: 80%;
+    background-color: #f7f7f7;
+    border-radius: 1rem;
+    overflow-y: scroll;
+  }
+  .chat_response {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -29px;
+    margin-right: 26px;
+  }
+  .chat_message {
+    display: flex;
+    text-align: center;
+    height: auto;
+    margin: 1rem;
+    .from {
+      font-weight: bold;
+      width: 50px;
+      font-size: 12px;
+    }
+    .content {
+      text-align: left;
+      width: 85%;
+      font-size: 12px;
+    }
+  }
+  .chat_input_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      margin-top: 10px;
+      input {
+        width: 250px;
+        height: 20px;
+        border-radius: 5px;
+      }
+      button {
+        width: 50px;
+        height: 26px;
+        background-color: #282c34;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  }
 }
 
 footer {

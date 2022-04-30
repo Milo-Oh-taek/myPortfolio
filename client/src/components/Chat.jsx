@@ -11,7 +11,7 @@ const Chat = () => {
 
   const scroll = () => {
     let scrollY = window.scrollY;
-    let height = window.innerHeight * 0.5;
+    let height = window.innerHeight * 0.2;
 
     if (scrollY > height) {
       setChatVisible(true);

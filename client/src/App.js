@@ -45,6 +45,13 @@ function App() {
     });
   }, []);
 
+  useEffect(() => {
+    if (location === "location") return;
+    axios.get("http://localhost:3001/entered", {
+      params: { country: location },
+    });
+  }, [location]);
+
   return (
     <div className="App">
       <div className="lang_area">
