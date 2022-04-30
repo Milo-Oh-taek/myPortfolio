@@ -37,10 +37,14 @@ body {
   top: 0;
   background-color: #f7f7f7;
   z-index: 10;
+  @media screen and (max-width: 1023px) {
+    display: flex;
+    align-items: center;
+  }
   .toggleBtn {
     cursor: pointer;
     position: absolute;
-    right: 32px;
+    right: 5%;
     display: none;
     @media screen and (max-width: 1023px) {
       display: block;
@@ -97,9 +101,15 @@ section {
     }
     p {
       font-size: 1.5rem;
+      @media screen and (max-width: 767px) {
+        font-size: 1rem;
+      }
     }
     .section_content {
       margin: 2rem;
+      @media screen and (max-width: 767px) {
+        margin: 5px;
+      }
     }
     @media screen and (max-width: 767px) {
       width: 95%;
@@ -207,12 +217,19 @@ section {
   border-radius: 1rem;
   background-color: white;
   padding: 10px;
+  @media all and (max-width: 767px) {
+    width: 250px;
+    height: 320px;
+  }
   .chat_Title {
     display: flex;
     justify-content: space-between;
     align-content: center;
     margin: 10px;
     font-size: 18px;
+    @media all and (max-width: 767px) {
+      font-size: 14px;
+    }
   }
   .chat_dialogue {
     width: 100%;
@@ -220,12 +237,16 @@ section {
     background-color: #f7f7f7;
     border-radius: 1rem;
     overflow-y: scroll;
+    word-break: break-all;
+    @media all and (max-width: 767px) {
+      height: 70%;
+    }
   }
   .chat_response {
     display: flex;
     justify-content: flex-end;
     margin-top: -29px;
-    margin-right: 26px;
+    margin-right: 5px;
   }
   .chat_message {
     display: flex;
@@ -236,6 +257,9 @@ section {
       font-weight: bold;
       width: 50px;
       font-size: 12px;
+      @media all and (max-width: 767px) {
+        width: 30px;
+      }
     }
     .content {
       text-align: left;
@@ -259,6 +283,9 @@ section {
         width: 250px;
         height: 20px;
         border-radius: 5px;
+        @media all and (max-width: 767px) {
+          width: 210px;
+        }
       }
       button {
         width: 50px;
@@ -267,6 +294,9 @@ section {
         color: white;
         border: none;
         border-radius: 5px;
+        @media all and (max-width: 767px) {
+          width: 40px;
+        }
       }
     }
   }

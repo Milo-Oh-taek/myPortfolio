@@ -8,7 +8,7 @@ const Aboutme = () => {
       <div className="section_content_wrapper">
         <div className="section_content" {...aboutRef}>
           <h1>Nice to meet you.</h1>
-          <div>
+          <div className="introduce">
             <p>
               I am a South Korean Front End Developer who is passionate about
               learning new skills.
