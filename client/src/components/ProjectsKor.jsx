@@ -75,11 +75,11 @@ const ProjectsKor = () => {
                 >
                   Github
                 </button>
-                <button
+                {/* <button
                   onClick={() => window.open("http://miloshoppinglist.site/")}
                 >
                   Website
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
