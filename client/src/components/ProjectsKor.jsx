@@ -14,7 +14,10 @@ const ProjectsKor = () => {
           </div>
           <div className="project_box_div" {...project1}>
             <div className="project_half_left">
-              <img width="100%" src="/shoppinglist.png" alt="shoppinglist" />
+              <video autoPlay loop muted width="100%">
+                <source src="/shoppinglist.mp4" />
+              </video>
+              {/* <img width="100%" src="/shoppinglist.png" alt="shoppinglist" /> */}
             </div>
             <div className="project_half_right">
               <div>
@@ -54,7 +57,7 @@ const ProjectsKor = () => {
               </div>
               <div className="project_desc">
                 <div className="project_desc_title">Style</div>
-                <div className="project_desc_content">Styled Components</div>
+                <div className="project_desc_content">SCSS</div>
               </div>
               <div className="project_desc">
                 <div className="project_desc_title">Deployment</div>

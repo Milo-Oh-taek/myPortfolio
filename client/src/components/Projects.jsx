@@ -14,7 +14,10 @@ const Projects = () => {
           </div>
           <div className="project_box_div" {...project1}>
             <div className="project_half_left">
-              <img width="100%" src="/shoppinglist.png" alt="shoppinglist" />
+              <video autoPlay loop muted width="100%">
+                <source src="/shoppinglist.mp4" />
+              </video>
+              {/* <img width="100%" src="/shoppinglist.mp4" alt="shoppinglist" /> */}
             </div>
             <div className="project_half_right">
               <div>
@@ -53,7 +56,7 @@ const Projects = () => {
               </div>
               <div className="project_desc">
                 <div className="project_desc_title">Style</div>
-                <div className="project_desc_content">Styled Components</div>
+                <div className="project_desc_content">SCSS</div>
               </div>
               <div className="project_desc">
                 <div className="project_desc_title">Deployment</div>
@@ -91,15 +94,16 @@ const Projects = () => {
                 <br />
                 <ul>
                   <li>
-                    It is a standard online-shop website, <b>built with Next</b> which
-                    enables <b>server-side-rendering without flickering.</b>
+                    It is a standard online-shop website, <b>built with Next</b>{" "}
+                    which enables{" "}
+                    <b>server-side-rendering without flickering.</b>
                   </li>
                   <li>
                     <b>Multiple filters</b> through <b>query string</b>,
                   </li>
                   <li>
-                    I used <b>Redux Toolkit</b> for states management, as I find it
-                    more transparant than Redux-saga.
+                    I used <b>Redux Toolkit</b> for states management, as I find
+                    it more transparant than Redux-saga.
                   </li>
                   <li>
                     Built{" "}
