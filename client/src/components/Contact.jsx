@@ -22,7 +22,6 @@ const Contact = () => {
               </a>
               <br />
               <FontAwesomeIcon icon={faBlogger} />
-              (new){" "}
               <a href="https://milo-oh-taek.github.io/" target="blank">
                 Blog
               </a>
